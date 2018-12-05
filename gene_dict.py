@@ -15,4 +15,5 @@ def load_dict():
 	hugo_symbol['combined_value'] = hugo_symbol.apply(lambda x: (x.PyClonePhyloCluster, x.exist), axis=1)
 	
 	mapping = dict(zip(hugo_symbol.combined_key, hugo_symbol.combined_value))
+	gene_list = set(hugo_symbol['Hugo_Symbol'])
 	return mapping, gene_list
