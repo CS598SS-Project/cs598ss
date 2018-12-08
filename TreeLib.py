@@ -1,5 +1,6 @@
 class Tree:
-    def __init__(self):
+    def __init__(self,patient):
+        self.patient=patient
         self.node=[]
         self.depth={}
         self.edge=[]
@@ -33,3 +34,5 @@ class Tree:
         self.depth[node]=dep;
         for child in self.child[node]:
             self.find_depth(child,dep+1)
+
+
