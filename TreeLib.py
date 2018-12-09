@@ -79,3 +79,12 @@ def load_trees():
             indices = arr[:max_trees]
             trees[patient] = [trees[patient][i] for i in indices]
     return trees
+
+def save_Tree(t)
+    with open("%s.dot"%t.patient, "w") as f:
+        f.write("digraph {\n")
+        for v1,v2 in t.edges:
+            f.write("\t%s -> %s;\n" % (v1,v2) )
+        f.write("}")
+
+
