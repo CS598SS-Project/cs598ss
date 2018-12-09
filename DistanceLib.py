@@ -67,15 +67,15 @@ def distance_profile(t,w):
             g1,g2=critical_gene[i],critical_gene[j]
             r=relation(t,g1,g2)
             if r=="child":
-                answer+= 1-w[g2][g1]
-                answer+= w[g1][g2]
+                answer+= (1-w[g2][g1])**2
+                answer+= (w[g1][g2])**2
             if r=="parent":
-                answer+= 1-w[g1][g2]
-                answer+=w[g2][g1]
+                answer+= (1-w[g1][g2])**2
+                answer+= (w[g2][g1])**2
             if r=="self":
-                answer+=abs(.5-w[g1][g2])
-                answer+=abs(.5-w[g2][g1])
+                answer+=(.5-w[g1][g2])**2
+                answer+=(.5-w[g2][g1])**2
             if r=="no_relation":
-                answer+= w[g1][g2]
-                answer+= w[g2][g1]
+                answer+= w[g1][g2]**2
+                answer+= w[g2][g1]**2
     return answer
