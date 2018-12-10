@@ -1,5 +1,7 @@
 import glob
 import numpy as np
+import gene_dict
+import DistanceLib
 
 max_trees = 20
 
@@ -80,10 +82,14 @@ def load_trees():
             trees[patient] = [trees[patient][i] for i in indices]
     return trees
 
-def save_Tree(t)
-    with open("%s.dot"%t.patient, "w") as f:
+def save_Tree(t, name):
+    with open("output/%s_%s.dot"%(t.patient, name), "w") as f:
         f.write("digraph {\n")
-        for v1,v2 in t.edges:
+        for v in t.node:
+            idx=int(v.lstrip("v"))-1
+            cluster=int(DistanceLib.idx2clusters[t.patient][idx])
+            f.write("%s [label=\"%s\"]"%(v,",".join( gene_dict.mapping_to_gene[(t.patient,cluster)] )))
+        for v1,v2 in t.edge:
             f.write("\t%s -> %s;\n" % (v1,v2) )
         f.write("}")
 

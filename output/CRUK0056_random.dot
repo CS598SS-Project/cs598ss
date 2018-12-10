@@ -1,0 +1,5 @@
+digraph {
+v3 [label="TP53"]v2 [label="TTN"]v1 [label="OBSCN,LOC93432,CDH23,SSPO,USH2A,CDH10,RYR1,ZFHX4,RYR3,RYR2,NEB,NCS1,NRXN1,DNAH5,SPTA1,CSMD1,MUC2,HMCN1"]v4 [label=""]	v3 -> v2;
+	v1 -> v4;
+	v1 -> v3;
+}

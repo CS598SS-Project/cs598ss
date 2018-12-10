@@ -1,0 +1,8 @@
+digraph {
+v7 [label=""]v6 [label="FAM135B"]v2 [label="DOCK2,SYNE1"]v3 [label="CNTNAP2"]v5 [label="XIRP2"]v1 [label="PCDH15,SSPO,ABCA13,TP53,USH2A,ZFHX4,MROH2B,RYR2,NCS1,NRXN1,CACNA1E,SPTA1,CSMD3,LRP1B,TTN,MUC2,PAPPA2,CSMD2,KRAS"]v4 [label="COL22A1"]	v7 -> v6;
+	v7 -> v2;
+	v3 -> v5;
+	v1 -> v7;
+	v1 -> v4;
+	v1 -> v3;
+}

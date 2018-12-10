@@ -1,0 +1,5 @@
+digraph {
+v1 [label="NEB,CACNA1E,USH2A"]v4 [label=""]v3 [label="XIRP2"]v2 [label="OBSCN,TP53"]	v1 -> v4;
+	v1 -> v3;
+	v1 -> v2;
+}

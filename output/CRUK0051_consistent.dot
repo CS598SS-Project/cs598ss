@@ -1,0 +1,6 @@
+digraph {
+v5 [label="NEB"]v2 [label=""]v1 [label="OBSCN,LOC93432,SSPO,UNC80,CNTNAP2,CNTNAP5,RYR1,RYR3,RYR2,CACNA1E,LRP1B,PIEZO2,FAM135B,LAMA1,MUC2,CDH23,EYS,MUC16,KRAS,LRP2,ABCA13,TP53,OR4E2,NRXN1,CSMD1"]v4 [label=""]v3 [label=""]	v5 -> v2;
+	v1 -> v5;
+	v1 -> v4;
+	v1 -> v3;
+}

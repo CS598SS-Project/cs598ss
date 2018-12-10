@@ -1,0 +1,8 @@
+digraph {
+v3 [label="LOC93432,MUC16"]v7 [label=""]v6 [label=""]v2 [label="TTN"]v4 [label=""]v1 [label="USH2A,ZFHX4,NCS1,CSMD2,CSMD3,CNTNAP2,LPHN3,RYR1,RYR2,FAM135B,LAMA1,MUC2,CDH23,MUC19,CTNNA2,KRAS,LRP2,ABCA13,COL22A1,OR4E2,NRXN1,ANK2,DPP6,PCDH15"]v5 [label=""]	v3 -> v7;
+	v3 -> v6;
+	v2 -> v4;
+	v1 -> v5;
+	v1 -> v3;
+	v1 -> v2;
+}

@@ -2,11 +2,11 @@ import gene_dict
 
 fc=open("data/clusters.tsv")
 idx2clusters={line.split('\t')[0]:line.split('\t')[1].rstrip('\n').split(',') for line in fc}
-mapping,genes=gene_dict.load_dict()
+mapping=gene_dict.mapping
 clusters2idx={patient:
               {int(idx2clusters[patient][j]):j for j in range(len(idx2clusters[patient]))}
               for patient in idx2clusters}
-critical_gene=gene_dict.retrieve_critical_genes()
+critical_genes=gene_dict.critical_genes
 
 def relation(t,g1,g2):
     if ((t.patient,g1) not in mapping) or ((t.patient,g2) not in mapping) :
@@ -25,9 +25,9 @@ def relation(t,g1,g2):
 
 def distance(t1,t2):
     answer=0.
-    for i in range(len(critical_gene)):
+    for i in range(len(critical_genes)):
         for j in range(i):
-            g1,g2=critical_gene[i],critical_gene[j]
+            g1,g2=critical_genes[i],critical_genes[j]
             r1=relation(t1,g1,g2)
             r2=relation(t2,g1,g2)
             if r1==r2: 
@@ -43,10 +43,10 @@ def distance(t1,t2):
 
 def cal_w(trees):
     # import pdb; pdb.set_trace()
-    w={f:{g:0. for g in critical_gene} for f in critical_gene}
-    for i in range(len(critical_gene)):
+    w={f:{g:0. for g in critical_genes} for f in critical_genes}
+    for i in range(len(critical_genes)):
         for j in range(i):
-            g1,g2=critical_gene[i],critical_gene[j]
+            g1,g2=critical_genes[i],critical_genes[j]
             for t in trees:
                 r=relation(t,g1,g2)
                 if r=="child":
@@ -62,9 +62,9 @@ def cal_w(trees):
 
 def distance_profile(t,w):
     answer=0.
-    for i in range(len(critical_gene)):
+    for i in range(len(critical_genes)):
         for j in range(i):
-            g1,g2=critical_gene[i],critical_gene[j]
+            g1,g2=critical_genes[i],critical_genes[j]
             r=relation(t,g1,g2)
             if r=="child":
                 answer+= (1-w[g2][g1])**2

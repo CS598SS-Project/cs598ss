@@ -1,0 +1,11 @@
+digraph {
+v7 [label=""]v4 [label="RYR3,PCDH15"]v3 [label="RYR2"]v2 [label="TP53,FAM135B"]v6 [label="SSPO"]v8 [label=""]v5 [label="RELN"]v1 [label="OBSCN,LAMA1,NCS1,UNC80,ANK2,CSMD1,TTN,MUC16,KRAS"]v10 [label=""]v9 [label=""]	v7 -> v4;
+	v7 -> v3;
+	v7 -> v2;
+	v6 -> v8;
+	v6 -> v5;
+	v1 -> v10;
+	v1 -> v9;
+	v1 -> v7;
+	v1 -> v6;
+}

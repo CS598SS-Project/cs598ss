@@ -1,0 +1,6 @@
+digraph {
+v4 [label="LPHN3"]v5 [label=""]v2 [label="ZFHX4,TTN"]v3 [label="HMCN1,RELN"]v1 [label="LRP2,LAMA1,COL22A1,TP53,DOCK2,RYR2,OR4E2,UNC80,SPTA1,LRP1B,DPP6,MUC19,MUC16,SYNE1,CSMD2"]	v4 -> v5;
+	v2 -> v3;
+	v1 -> v4;
+	v1 -> v2;
+}

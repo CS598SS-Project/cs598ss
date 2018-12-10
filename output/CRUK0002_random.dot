@@ -1,0 +1,9 @@
+digraph {
+v8 [label=""]v1 [label="CSMD3,DNAH5"]v6 [label="RYR3"]v5 [label=""]v4 [label="MUC16"]v3 [label="CSMD2"]v2 [label="DOCK2,EYS"]v7 [label=""]	v8 -> v1;
+	v6 -> v5;
+	v6 -> v4;
+	v4 -> v3;
+	v2 -> v8;
+	v2 -> v6;
+	v1 -> v7;
+}
